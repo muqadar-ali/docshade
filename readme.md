@@ -25,7 +25,7 @@ Ensure you have Python installed. The application relies on the following extern
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/docshade.git
+   git clone https://github.com/muqadar-ali/docshade.git
    cd docshade
    ```
 
