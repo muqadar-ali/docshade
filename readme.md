@@ -20,7 +20,6 @@ Ensure you have Python installed. The application relies on the following extern
 - Streamlit (UI framework)
 - PyMuPDF (fitz) (PDF manipulation)
 - EasyOCR (Text recognition)
-- Pillow (Image processing)
 
 ## Installation
 
@@ -32,9 +31,15 @@ Ensure you have Python installed. The application relies on the following extern
 
 2. Create and activate a virtual environment (recommended):
    ```bash
-   python -m venv venv or python3 -m venv venv
+   python -m venv venv
    source venv/bin/activate  # On Windows use: venv\Scripts\activate
    ```
+   or 
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows use: venv\Scripts\activate
+   ```
+   
 
 3. Install the required dependencies:
    ```bash

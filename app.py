@@ -2,7 +2,6 @@ import streamlit as st
 import fitz  # PyMuPDF
 import io
 import easyocr
-from PIL import Image
 import math
 import zipfile
 
