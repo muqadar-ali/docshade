@@ -110,6 +110,9 @@ st.title("🛡️ DocShade")
 
 uploaded_files = st.file_uploader("Upload PDFs (Drag & Drop)", type="pdf", accept_multiple_files=True)
 
+if uploaded_files and sum(f.size for f in uploaded_files) > 10 * 1024 * 1024:
+    st.error("Total file size exceeds the 10 MB limit.")
+
 col1, col2 = st.columns([1, 1])
 with col1:
     watermark_text = st.text_input("Watermark Text", value="RENTAL USE ONLY")
@@ -122,6 +125,8 @@ with col2:
 if st.button("Process & Protect", type="primary"):
     if not uploaded_files:
         st.warning("Please upload files first.")
+    elif sum(f.size for f in uploaded_files) > 10 * 1024 * 1024:
+        pass
     else:
         sensitive_list = [l.strip() for l in raw_sensitive_data.split('\n') if l.strip()]
         processed_results = []
