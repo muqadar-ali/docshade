@@ -105,7 +105,7 @@ def process_single_pdf(file_content, sensitive_patterns, watermark_text):
     return output_buffer
 
 # --- UI Layout (Remains consistent) ---
-st.set_page_config(page_title="DocShade", layout="wide")
+st.set_page_config(page_title="🛡️ DocShade", layout="wide")
 st.title("🛡️ DocShade")
 
 uploaded_files = st.file_uploader("Upload PDFs (Drag & Drop)", type="pdf", accept_multiple_files=True)
@@ -117,6 +117,7 @@ with col1:
 
 with col2:
     raw_sensitive_data = st.text_area("Sensitive Data (one per line)", height=150)
+    st.caption("Hint: Scanned PDFs often have inconsistent spacing or artifacts between words. To ensure successful redaction, break multi-word phrases into individual words on separate lines.")
 
 if st.button("Process & Protect", type="primary"):
     if not uploaded_files:
