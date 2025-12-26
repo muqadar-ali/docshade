@@ -20,6 +20,7 @@ Ensure you have Python installed. The application relies on the following extern
 - Streamlit (UI framework)
 - PyMuPDF (fitz) (PDF manipulation)
 - EasyOCR (Text recognition)
+- Pillow (Image processing)
 
 ## Installation
 
