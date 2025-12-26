@@ -231,7 +231,7 @@ def process_file(file_content, file_name, sensitive_patterns, watermark_text):
     return output_buffer
 
 # --- UI Layout (Remains consistent) ---
-st.set_page_config(page_title="🛡️ DocShade", layout="wide")
+st.set_page_config(page_title="DocShade", layout="wide")
 st.title("🛡️ DocShade")
 
 uploaded_files = st.file_uploader("Upload Files (Drag & Drop)", type=["pdf", "png", "jpg", "jpeg"], accept_multiple_files=True)
